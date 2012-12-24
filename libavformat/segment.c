@@ -37,7 +37,7 @@
 #include "libavutil/mathematics.h"
 #include "libavutil/timestamp.h"
 
-#define cached_size 3
+//#define cached_size 3
 
 struct strNode
 {
@@ -118,7 +118,8 @@ static void updateList(AVFormatContext *s,FILE *file)
  
  count++;
 
- if(count > cached_size)
+// if(count > cached_size)
+ if(count > seg->list_size)
  {
    Node* newHead = head->next;
    free(head->content);
@@ -143,7 +144,8 @@ static void writeForAndroid(AVFormatContext* s)
      fprintf(context, "#EXTM3U\n");
      fprintf(context, "#EXT-X-VERSION:3\n");
 
-     sNum = seg->segment_idx-cached_size + 1; 
+     //sNum = seg->segment_idx-cached_size + 1; 
+     sNum = seg->segment_idx - seg->list_size + 1;
      if (sNum<0)
        sNum = 0;
      fprintf(context, "#EXT-X-MEDIA-SEQUENCE:%d\n", sNum); 
@@ -310,11 +312,11 @@ static int segment_end(AVFormatContext *s, int write_trailer)
                oc->filename);
 
     if (seg->list) {
-        if (seg->list_size && !(seg->segment_count % seg->list_size)) {
+       /* if (seg->list_size && !(seg->segment_count % seg->list_size)) {
             segment_list_close(s);
             if ((ret = segment_list_open(s)) < 0)
                 goto end;
-        }
+        }*/
 
         if (seg->list_type == LIST_TYPE_FLAT) {
             avio_printf(seg->list_pb, "%s\n", oc->filename);

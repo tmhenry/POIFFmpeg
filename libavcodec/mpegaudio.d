@@ -1,2 +1,1 @@
-libavcodec/mpegaudio.o libavcodec/mpegaudio.o: libavcodec/mpegaudio.c \
-  libavcodec/mpegaudio.h
+libavcodec/mpegaudio.o: libavcodec/mpegaudio.c libavcodec/mpegaudio.h

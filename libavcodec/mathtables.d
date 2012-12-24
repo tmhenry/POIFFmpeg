@@ -1,1 +1,1 @@
-libavcodec/mathtables.o libavcodec/mathtables.o: libavcodec/mathtables.c
+libavcodec/mathtables.o: libavcodec/mathtables.c

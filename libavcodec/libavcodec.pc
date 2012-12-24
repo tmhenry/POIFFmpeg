@@ -9,6 +9,6 @@ Version: 54.81.100
 Requires: libavutil = 52.12.100
 Requires.private: 
 Conflicts:
-Libs: -L${libdir} -lavcodec -lm -framework CoreFoundation -framework VideoDecodeAcceleration -framework QuartzCore -lbz2 -lz
+Libs: -L${libdir} -lavcodec -ldl -lm -pthread -lrt
 Libs.private: 
 Cflags: -I${includedir}

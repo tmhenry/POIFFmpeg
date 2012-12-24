@@ -1,1 +1,1 @@
-libavcodec/aandcttab.o libavcodec/aandcttab.o: libavcodec/aandcttab.c
+libavcodec/aandcttab.o: libavcodec/aandcttab.c

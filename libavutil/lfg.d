@@ -1,5 +1,4 @@
-libavutil/lfg.o libavutil/lfg.o: libavutil/lfg.c libavutil/lfg.h \
-  libavutil/md5.h libavutil/attributes.h libavutil/version.h \
-  libavutil/intreadwrite.h libavutil/avconfig.h libavutil/bswap.h \
-  config.h libavutil/x86/bswap.h config.h libavutil/attributes.h \
-  libavutil/x86/intreadwrite.h
+libavutil/lfg.o: libavutil/lfg.c libavutil/lfg.h libavutil/md5.h \
+ libavutil/attributes.h libavutil/version.h libavutil/intreadwrite.h \
+ libavutil/avconfig.h libavutil/bswap.h config.h libavutil/x86/bswap.h \
+ libavutil/attributes.h libavutil/x86/intreadwrite.h

@@ -1,1 +1,1 @@
-config:x86:x86_64:generic:darwin:llvm-gcc 4.2.1 (LLVM build 2336.11.00):
+config:x86:x86_32:generic:linux:gcc 4.6 (Ubuntu/Linaro 4.6.3-1ubuntu5):
